@@ -1,0 +1,395 @@
+/* RESET & FONT DASAR */
+body {
+    background-color: #f3f4f6;
+    color: #000000;
+    font-family: 'Arial Black', Impact, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+p, li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* KARTU NEUBRUTALISME (NEO-CARD) */
+.neo-card {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    padding: 30px;
+    box-shadow: 6px 6px 0px #000000;
+    transition: all 0.2s ease;
+}
+
+.header-card {
+    background-color: #fde047; /* Kuning Cerah */
+    text-align: center;
+}
+
+.header-card h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.sub-heading {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* LAYOUT GRID UTUK PROFIL */
+.grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .grid-two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TOMBOL NEUBRUTALISME (NEO-BTN) */
+.filter-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.neo-btn {
+    background-color: #a7f3d0; /* Hijau Mint */
+    color: #000000;
+    font-family: 'Arial Black', sans-serif;
+    padding: 12px 24px;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.neo-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+.neo-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px #000000;
+}
+
+.neo-btn.active {
+    background-color: #ffb703; /* Oranye Terang */
+}
+
+/* TAMPILAN KELAS & TABEL */
+.kelas-block {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    padding: 20px;
+    margin-top: 25px;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+.kelas-block h3 {
+    margin-top: 0;
+    background-color: #67e8f9; /* Cyan */
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid #000000;
+}
+
+.table-siswa {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table-siswa th, .table-siswa td {
+    border: 2px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-siswa th {
+    background-color: #f3f4f6;
+}
+
+/* ====== STYLE GALERI KEGIATAN ====== */
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.kegiatan-card {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    overflow: hidden;
+}
+
+.foto-placeholder {
+    background-color: #ffb703; /* Warna Oranye Khas */
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 3px solid #000000;
+}
+
+/* Jika nanti pakai foto asli, style ini yang akan menghiasnya */
+.kegiatan-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #000000;
+}
+
+.kegiatan-info {
+    padding: 15px;
+}
+
+.kegiatan-info h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;/* ====== STYLE NAVBAR NEUBRUTALISME ====== */
+.neo-navbar {
+    background-color: #a7f3d0; /* Hijau Mint Khas */
+    border: 3px solid #000000;
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* Jarak bawah ke konten */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.nav-brand {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
+}
+
+/* Efek kotak tebal saat menu di-hover atau aktif */
+.nav-item:hover, .nav-item.active {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
+    transform: translate(-2px, -2px);
+}
+
+/* Responsif untuk HP agar tidak berantakan */
+@media (max-width: 600px) {
+    .neo-navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+    background-color: #a7f3d0; /* Hijau Mint */
+    display: inline-block;
+    padding: 2px 8px;
+    border: 2px solid #000000;
+}
+
+.kegiatan-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ====== STYLE FOOTER NEUBRUTALISME ====== */
+.neo-footer {
+    background-color: #fde047; /* Kuning Terang */
+    border-top: 4px solid #000000;
+    margin-top: 50px;
+    padding: 40px 20px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #000000;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.neo-footer h3, .neo-footer h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    transition: transform 0.1s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ====== STYLE NAVBAR NEUBRUTALISME ====== */
+.neo-navbar {
+    background-color: #a7f3d0; /* Hijau Mint Khas */
+    border: 3px solid #000000;
+    max-width: 1000px;
+    margin: 0 auto 20px auto; /* Jarak bawah ke konten */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 0px #000000;
+}
+
+.nav-brand {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
+}
+
+/* Efek kotak tebal saat menu di-hover atau aktif */
+.nav-item:hover, .nav-item.active {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
+    transform: translate(-2px, -2px);
+}
+
+/* Responsif untuk HP agar tidak berantakan */
+@media (max-width: 600px) {
+    .neo-navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ====== STYLE TOMBOL TOGGLE THEME ====== */
+.neo-btn-toggle {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 0px #000000;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.neo-btn-toggle:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000000;
+}
+
+/* ====== LOGIKA TEMA GELAP NEUBRUTALISME (DARK MODE) ====== */
+body.dark-theme {
+    background-color: #121212; /* Latar Belakang Hitam Pekat */
+    color: #ffffff; /* Semua teks utama jadi putih */
+}
+
+/* Kartu tetap mempertahankan border hitam tebal, tapi background jadi gelap */
+body.dark-theme .neo-card, 
+body.dark-theme .kelas-block,
+body.dark-theme .kegiatan-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #000000;
+    box-shadow: 6px 6px 0px #000000;
+}
+
+/* Tabel di mode gelap */
+body.dark-theme .table-siswa th {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+body.dark-theme .table-siswa td {
+    border-color: #000000;
+}
+
+/* Menyesuaikan warna teks paragraf di mode gelap agar kontras */
+body.dark-theme p, 
+body.dark-theme li {
+    color: #e0e0e0;
+}
